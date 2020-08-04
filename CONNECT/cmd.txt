@@ -1,0 +1,5 @@
+1. >xampp\mysql\bin
+1. cmd:mysql -u root -p
+1. no password
+
+
