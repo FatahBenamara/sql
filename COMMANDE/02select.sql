@@ -41,6 +41,14 @@ SELECT * FROM employes ORDER BY salaire DESC LIMIT 3,5; --lecture: apres le 3eme
 SELECT * FROM employes ORDER BY salaire LIMIT 0,1;
 
 --#########################     calcule     ########################
+SELECT nom, prenom, salaire, salaire*12 as 'salaire annuel' FROM employes;
+SELECT SUM(salaire*12) as 'masse salariale' FROM employes;
+SELECT SUM(salaire) as 'salaire moyen' FROM employes;
+SELECT ROUND(AVG(salaire)) as 'salaire moyen arrondi' FROM employes;
+SELECT ROUND(AVG(salaire),2) as 'salaire moyen arrondi' FROM employes; --nombre dicimal de 2
+SELECT ROUND(AVG(salaire),2) as 'salaire moyen arrondi' FROM employes WHERE services='commercial';
+SELECT COUNT(*) as 'nb de femmes' FROM employes WHERE sexe='f';
+
 
 
 
