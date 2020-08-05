@@ -48,6 +48,8 @@ SELECT ROUND(AVG(salaire)) as 'salaire moyen arrondi' FROM employes;
 SELECT ROUND(AVG(salaire),2) as 'salaire moyen arrondi' FROM employes; --nombre dicimal de 2
 SELECT ROUND(AVG(salaire),2) as 'salaire moyen arrondi' FROM employes WHERE services='commercial';
 SELECT COUNT(*) as 'nb de femmes' FROM employes WHERE sexe='f';
+SELECT MIN(salaire) as 'salaire minimum' FROM employes;
+SELECT MAX(salaire) as 'salaire maximal' FROM employes;
 
 
 
