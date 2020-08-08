@@ -60,8 +60,8 @@ SELECT * FROM employes WHERE services NOT IN ('direction','commercial','informat
 
 --###############################    GROUPEMENT   ############################################
 
-
-
+SELECT sexe,service, COUNT(*) FROM employes GROUP BY service; -- regroupé par services different
+SELECT sexe,AVG(salaire) FROM employes GROUP BY service; -- salaire moyen des hommes et femmes regroupé par services different.
 
 
 
