@@ -1,9 +1,13 @@
 SELECT * 
+-- SELECT DISTINC 'prenom' 
 FROM employes 
-WHERE (date_embauche 
+WHERE services='informatique'
+--WHERE services IN ('direction','commercial','informatique')
+--WHERE services NOT IN ('direction','commercial','informatique')
+AND (date_embauche 
 BETWEEN '2010-01-04' AND '2015-12-31')
- AND services='informatique'
-ORDER BY salaire DESC
+ORDER BY salaire DESC, services ASC
+--
 LIMIT 10,5
 
 
@@ -20,13 +24,23 @@ LIKE '%th%';
 
 
 ;
+--afficher les femmes
+-- qui ne sont pas du service 'comptabilité' ni 'informatique'
+-- trié par service
 
---#######################
-SELECT * 
-FROM employes 
-ORDER BY services ASC, salaire DESC
-LIMIT 2
+SELECT * FROM employes WHERE sexe = 'f' AND service NOT IN ('comptabilite','informatique') ORDER BY  service ASC;
 
- 
 
-;
+
+
+
+
+
+
+
+
+
+
+
+
+
