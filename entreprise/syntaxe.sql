@@ -1,7 +1,16 @@
 SELECT * 
--- SELECT DISTINC 'prenom' 
+--SELECT DISTINCT sexe, prenom
+-- SELECT SUM(salaire*12) 
+-- SELECT AVG(salaire) 
+-- SELECT ROUND(AVG(salaire))
+-- SELECT ROUND(AVG(salaire),2) 
+-- SELECT COUNT(*) 
+-- SELECT MIN(salaire) 
+-- SELECT MAX(date_embauche) 
+
 FROM employes 
 WHERE services='informatique'
+--WHERE id_employes = 699;
 --WHERE services IN ('direction','commercial','informatique')
 --WHERE services NOT IN ('direction','commercial','informatique')
 AND (date_embauche 
@@ -35,14 +44,5 @@ WHERE id_employes = 992;
 UPDATE employes 
 SET salaire = salaire+100 
 WHERE id_employes = 699;
-
-
-
-
-
-
-
-
-
 
 
