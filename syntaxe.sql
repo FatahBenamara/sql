@@ -9,7 +9,9 @@ BETWEEN '2010-01-04' AND '2015-12-31')
 ORDER BY salaire DESC, services ASC
 --
 LIMIT 10,5
-
+--
+GROUP BY sexe
+HAVING COUNT(*) > 1; -- sans WHERE
 
 ;
 
@@ -19,20 +21,20 @@ SELECT *
 FROM employes 
 WHERE prenom 
 LIKE '%th%';
-
-
-
-
 ;
---afficher les femmes
--- qui ne sont pas du service 'comptabilité' ni 'informatique'
--- trié par service
 
-SELECT * FROM employes WHERE sexe = 'f' AND service NOT IN ('comptabilite','informatique') ORDER BY  service ASC;
+--##########################
 
+INSERT INTO employes (nom,prenom) 
+VALUES ("benamara","fatah");
 
-
-
+--##########################
+DELETE FROM employes 
+WHERE id_employes = 992;
+--##########################
+UPDATE employes 
+SET salaire = salaire+100 
+WHERE id_employes = 699;
 
 
 

@@ -60,15 +60,14 @@ SELECT * FROM employes WHERE services NOT IN ('direction','commercial','informat
 
 --###############################    GROUPEMENT   ############################################
 
-SELECT sexe,service, COUNT(*) FROM employes GROUP BY service; -- regroupé par services different
-SELECT sexe,AVG(salaire) FROM employes GROUP BY service; -- salaire moyen des hommes et femmes regroupé par services different.
+SELECT sexe, COUNT(*) FROM employes GROUP BY sexe; -- nb employés par sexe
+SELECT sexe,ROUND(AVG(salaire),2) FROM employes GROUP BY sexe; -- salaire moyen par sexe
 
 
+SELECT (service),SUM(salaire*12) FROM employes GROUP BY service;--masse slariale par serice 
+--###################  HAVING             #########################################""
 
-
-
-
-
+SELECT (service), COUNT(*) FROM employes GROUP BY service HAVING COUNT(*) > 1; --filtre resultat du regroupement
 
 
 
