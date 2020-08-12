@@ -1,6 +1,7 @@
 1. >xampp\mysql\bin
 ------------------------
-1. cmd:mysql -u root -p baseName
+1. cmd:mysql -u root -p
+//1. cmd:mysql -u root -p baseName
 1. no password
 
 
@@ -11,12 +12,16 @@ SHOW DATABASES;
 CREATE DATABASE nomDatabase CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 DROP DATABASE nomDatabase;
 
---SE PLACER SUR UNE TABLE: 
-USE nomDatabase;
-
+2.open an second cmd: >xampp\mysql\bin
+------------------------
 --IMPORTER TABLE DANS UNE BDD : 
-mysql -u root -p nomDatabase < c:\sql\tableDatabase --ATTENTION: sans le point virgule (;)//uniquement quand on est sur mariaDB
+2.cmd: mysql -u root -p nomDatabase < c:\sql\tableDatabase --ATTENTION: sans le point virgule (;)//uniquement quand on est sur mariaDB
+2. no password
+2. close the second cmd
 
+--SE PLACER SUR UNE TABLE: 
+>>mariadb[]
+USE nomDatabase;
 
 --LISTER LES TABLES DE BDD : 
 SHOW TABLES;
