@@ -30,4 +30,8 @@ SHOW TABLES;
 --DECRIR UNE TABLE DE LA BDD
 DESC tableDatabase;
 
+3. exporter
+------------
+
+2.cmd: mysqldump -u root -p nomDatabase > c:\sql\fichier.sql --ATTENTION: sans le point virgule (;)//uniquement quand on est sur mariaDB
 
