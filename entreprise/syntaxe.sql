@@ -1,3 +1,7 @@
+show 
+desc 
+
+--############################
 SELECT * 
 --SELECT DISTINCT sexe, prenom
 -- SELECT SUM(salaire*12) 
